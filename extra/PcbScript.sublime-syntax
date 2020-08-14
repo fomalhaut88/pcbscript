@@ -1,0 +1,43 @@
+%YAML 1.2
+---
+name: PcbScript
+file_extensions:
+  - pcbs
+scope: source.python
+
+contexts:
+  main:
+    - include: comments
+    - include: line-statements
+    - include: block-statements
+    - include: macro
+
+  comments:
+    - match: "#"
+      scope: punctuation.definition.comment.python
+      push:
+        - meta_scope: comment.line.number-sign.python
+        - match: \n
+          pop: true
+
+  line-statements:
+    - match: \b(pin|pinq|wire|board|text|option|for|in|if|else)\b(?! *([,.()\]}]))
+      scope: keyword.other.print.python
+
+  block-statements:
+    - match: \b(translate|rotate)\b
+      scope: keyword.control.loop.while.python
+      push:
+        - meta_scope: meta.statement.loop.while.python
+        - match: ':(?!=)'
+          scope: punctuation.section.block.loop.while.python
+          pop: true
+
+  macro:
+    - match: '\bmacro\b'
+      scope: storage.type.function.python keyword.declaration.function.python
+      push:
+        - meta_scope: meta.function.python
+        - match: ':'
+          scope: punctuation.section.function.begin.python
+          pop: true

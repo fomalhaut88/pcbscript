@@ -1,0 +1,62 @@
+# Options
+
+option GAP = 0.1
+option PIN_DIN = 0.25
+option PIN_DOUT = 0.875
+option WIRE_WIDTH = 0.5
+option TEXT_HEIGHT = 0.75
+
+
+# Board
+
+board 15,7
+
+
+# Input and output pins
+
+pinq 1,1
+pinq 1,6
+pinq 14,1
+pinq 14,6
+
+
+# DIP
+
+macro dipv(x, y, n):
+    translate x,y:
+        for i in 0..n:
+            pin 0,i
+            pin 4,i
+
+dipv(4, 2, 4)
+
+
+# Wires
+
+wire 1,1 3,1 4,2
+wire 1,6 2,5 2,4 3,3 4,3
+wire 4,4 4,5
+wire 8,3 10,3
+wire 14,3 14,1
+wire 8,5 9,6 14,6
+wire 8,2 7,2 7,4 8,4
+
+
+# Pins
+
+pin 14,3
+pin 10,3
+
+
+# Text
+
+text "Example" 6,1
+
+
+# Rotation
+
+translate 6,5.5:
+    rotate 45:
+        pin -0.5,0
+        pin 0.5,0
+        wire -0.5,0 0.5,0
