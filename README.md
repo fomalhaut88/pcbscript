@@ -13,7 +13,7 @@ As far as Pcbscript is written in Python, it can be installed as an ordinary Pyt
 python -m pip install git+https://github.com/fomalhaut88/pcbscript.git
 ```
 
-**The version of python must be 3.5 or higher.**
+**The version of python must be 3.6 or higher.**
 
 
 ## Usage
