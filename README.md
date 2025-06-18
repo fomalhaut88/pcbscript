@@ -1,6 +1,6 @@
 # pcbscript
 
-Pcbscript is a compiler to generate a PCB structure from a text file written according to an internal DSL ([domain sepcific language](https://en.wikipedia.org/wiki/Domain-specific_language)) that is described below. DSL contains variables, loops, macroses, if-else statements, translation block, etc. The mission of Pcbscript is to make the PCB design easier, using a programming language instead of a graphical software.
+Pcbscript is a compiler to generate a PCB structure from a text file written according to an internal DSL ([domain specific language](https://en.wikipedia.org/wiki/Domain-specific_language)) that is described below. DSL contains variables, loops, macroses, if-else statements, translation block, etc. The mission of Pcbscript is to make the PCB design easier, using a programming language instead of a graphical software.
 
 ![Pcbscript](https://github.com/fomalhaut88/pcbscript/blob/master/examples/example.png?raw=true)
 
