@@ -61,7 +61,7 @@ class Drawer:
             round(image.size[0] / self._scale / 10 * dpi * coef),
             round(image.size[1] / self._scale / 10 * dpi * coef),
         )
-        image.thumbnail(size_insert, Image.ANTIALIAS)
+        image.thumbnail(size_insert, Image.LANCZOS)
 
         # Inserting into an A4 sheet
         size_a4 = (

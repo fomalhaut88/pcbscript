@@ -7,7 +7,7 @@ with open('README.md') as f:
 
 setup(
     name='pcbscript',
-    version="1.1.0",
+    version="1.2.0",
     description='A library to design PCB layout using an internal DSL.',
     long_description=long_description,
     long_description_content_type="text/markdown",
